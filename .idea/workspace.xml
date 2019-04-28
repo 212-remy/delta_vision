@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0fd0566-ec3a-406b-9e10-47eabcc0ff7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/delta_detection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/me212lab7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/me212lab7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/colorThresh.py" beforeDir="false" afterPath="$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/colorThresh.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,20 +49,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/colorThresh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="177" column="113" selection-start-line="177" selection-start-column="113" selection-end-line="177" selection-end-column="113" />
+            <state relative-caret-position="630">
+              <caret line="171" column="19" selection-start-line="171" selection-start-column="19" selection-end-line="171" selection-end-column="19" />
               <folding>
                 <element signature="e#121#133#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/delta_detection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -103,10 +96,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="992" />
-    <option name="y" value="24" />
-    <option name="width" value="928" />
-    <option name="height" value="1056" />
+    <option name="x" value="1920" />
+    <option name="y" value="71" />
+    <option name="width" value="1920" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -114,47 +107,14 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="me212lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="me212lab7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="me212lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="me212lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="catkin_ws" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="me212lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="me212lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="catkin_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="me212lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="me212lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="catkin_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="me212cv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="me212lab7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="me212lab7" type="462c0819:PsiDirectoryNode" />
-              <item name="catkin_ws" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="me212cv" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/catkin_ws/src/me212cv/scripts" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -183,15 +143,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556208197285</updated>
+      <workItem from="1556474422043" duration="6352000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6352000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <frame x="1920" y="71" width="1920" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18777293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18356457" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -203,6 +170,8 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32925585" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -226,6 +195,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/me212cv/images/Example_lena_denoise_noisy.jpg">
@@ -270,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catkin_ws/src/me212cv/scripts/colorThresh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="177" column="113" selection-start-line="177" selection-start-column="113" selection-end-line="177" selection-end-column="113" />
+        <state relative-caret-position="630">
+          <caret line="171" column="19" selection-start-line="171" selection-start-column="19" selection-end-line="171" selection-end-column="19" />
           <folding>
             <element signature="e#121#133#0" expanded="true" />
           </folding>
