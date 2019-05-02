@@ -61,12 +61,18 @@ u_v = Scale(tk, from_ = 0, to = 255, label = 'Value, upper', orient = HORIZONTAL
 u_v.pack()
 u_v.set(255)
 
+pub = rospy.Publisher('positions', Point)
+rate = rospy.Rate(1)  # 1hz
 
 def main():
-    rospy.Subscriber('/usb_cam/image_raw', Image, colorThreshCallback)
+
+    while not rospy.is_shutdown():
+        rospy.Subscriber('/usb_cam/image_raw', Image, colorThreshCallback)
+        rate.sleep()
+
     print("Subscribing")
-    mainloop()
-    # rospy.spin()
+    # mainloop()
+    rospy.spin()
 
 def colorThreshCallback(msg):
     # convert ROS image to opencv format
@@ -82,29 +88,34 @@ def colorThreshCallback(msg):
     # visualize it in a cv window
     cv2.imshow("Original_Image", cv_image)
     cv2.waitKey(3)
-    ################ RGB THRESHOLDING ####################
-    #get threshold values
-    
-    lower_bound_RGB = np.array([l_b.get(), l_g.get(), l_r.get()])
-    upper_bound_RGB = np.array([u_b.get(), u_g.get(), u_r.get()])
 
-    # threshold
-    mask_RGB = cv2.inRange(cv_image, lower_bound_RGB, upper_bound_RGB)
 
-    # get display image
-    disp_image_RGB = cv2.bitwise_and(cv_image,cv_image, mask= mask_RGB)
-    # cv2.imshow("RGB_Thresholding", disp_image_RGB)
-    # cv2.waitKey(3)
+    # ################ RGB THRESHOLDING ####################
+    # #get threshold values
+    #
+    # lower_bound_RGB = np.array([l_b.get(), l_g.get(), l_r.get()])
+    # upper_bound_RGB = np.array([u_b.get(), u_g.get(), u_r.get()])
+    #
+    # # threshold
+    # mask_RGB = cv2.inRange(cv_image, lower_bound_RGB, upper_bound_RGB)
+    #
+    # # get display image
+    # disp_image_RGB = cv2.bitwise_and(cv_image,cv_image, mask= mask_RGB)
+    # # cv2.imshow("RGB_Thresholding", disp_image_RGB)
+    # # cv2.waitKey(3)
+    #
+
+
     ################ HSV THRESHOLDING ####################
     # conver to HSV
     hsv_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2HSV)
 
     #['name', [hsv lower]. [hsv upper], [threshold values], True/False for contour approx ]
-    shape_params = [['black', [0,0,0],[184,26,36],[0,255],True,100],
-                    ['red',[154,30,0],[191,109,101],[0,255], False,200],
-                    ['yellow',[23,38,98],[53,188,158],[35,255],False,100],
-                    ['pink',[139,23,98],[221,255,255],[35,255],False,100],
-                    ['blue',[105,101,45],[150,255,255],[35,255],False,40]]
+    shape_params = [[1, [0,0,0],[184,26,36],[0,255],True,100], #black
+                    [2,[154,30,0],[191,109,101],[0,255], False,200], #red
+                    [3,[23,38,98],[53,188,158],[35,255],False,100], #yellow
+                    [4,[139,23,98],[221,255,255],[35,255],False,100], #pink
+                    [5,[105,101,45],[150,255,255],[35,255],False,40]] #blue
 
     # shape_params = [['red',[l_h.get(), l_s.get(), l_v.get()],[u_h.get(), u_s.get(), u_v.get()],[l_b.get(),u_b.get()],False,200]]
 
@@ -168,8 +179,15 @@ def colorThreshCallback(msg):
                 # draw the contour and center of the shape on the image
                 cv2.drawContours(cv_image, [c], -1, (0, 255, 0), 2)
                 cv2.circle(cv_image, (cX, cY), 7, (255, 255, 255), -1)
-                cv2.putText(cv_image, shape[0], (cX - 20, cY - 20),
+                cv2.putText(cv_image, str(shape[0]), (cX - 20, cY - 20),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+
+                point = Point(float(cX), float(cY), float(shape[0]))
+                rospy.loginfo(point)
+                pub.publish(point)
+
+
+
 
 
     # show the image
