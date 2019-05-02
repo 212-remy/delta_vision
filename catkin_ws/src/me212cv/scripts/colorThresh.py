@@ -170,7 +170,6 @@ def colorThreshCallback(msg):
                 cv2.circle(cv_image, (cX, cY), 7, (255, 255, 255), -1)
                 cv2.putText(cv_image, shape[0], (cX - 20, cY - 20),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
-                if
 
 
     # show the image
